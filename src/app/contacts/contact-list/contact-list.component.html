@@ -1,0 +1,94 @@
+<nav class="navbar"> 
+    <div class="container-fluid users">
+        <div class="d-flex flex-row">
+            <img src="../../../assets/images/icono_usuarios.png" (click)="obtainAllContacts()"/>
+            <h4 (click)="obtainAllContacts()">Usuarios</h4>
+        </div>
+        <div class="d-flex extra-padding">
+            <input type="text" class="form-control" placeholder="Buscador" (keyup.enter)="getFilter()" #filtro>
+            <div class="search-icon">
+                <img src="../../../assets/images/icono_buscar.png" id="input-img" (click)="getFilter()">
+            </div>        
+        </div>
+    </div>
+</nav>
+
+<div class="contacts-container">
+    <div class="arreglo">
+            <div *ngFor="let contacto of contactos"  class="espacio-carta">
+                <div class="carta">
+                    <div class="encabezado">            
+                        <h4>{{ contacto.firstName }} {{ contacto.lastName}}</h4>
+                        <input  type="image" data-bs-toggle="modal" data-bs-target="#exampleModalUpdate" (click)="onEdit(contacto)" src="../../../assets/images/icono_editar.png"/>
+                    </div>
+                    <div class="cuerpo">
+                        <div *ngIf="contacto.gender === 'm'" class="imagen-s">
+                            <img src="../../../assets/images/icono_hombre.png">
+                        </div>
+                        <div *ngIf="contacto.gender === 'f'" class="imagen-s">
+                            <img src="../../../assets/images/icono_mujer.png">
+                        </div>
+                        <div class="info">
+                            <p>{{ contacto.location }}</p>
+                            <p>{{contacto.phone}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar usuario</h5>
+          <input class="close" type="image" src="../../assets/images/icono_cerrar.png" data-bs-dismiss="modal" aria-label="Close" />
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="formValueUpdate">
+              <div class="row">
+                  <div class="col-md-6">
+                      <label for="exampleInputNameU" class="form-label">Nombre</label>
+                      <input type="text" formControlName="firstName" class="form-control" id="exampleInputNameU">
+                  </div>
+                  <div class="col-md-6">
+                      <label for="exampleInputLastNameU" class="form-label">Apellido</label>
+                      <input type="text" formControlName="lastName" class="form-control" id="exampleInputLastNameU">
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <label for="exampleInputLocationU" class="form-label">Ubicación</label>
+                      <input type="text" formControlName="location" class="form-control" id="exampleInputLocationU">
+                  </div>
+                  <div class="col-md-6">
+                      <label for="exampleInputPhoneU" class="form-label">Celular</label>
+                      <input type="text" formControlName="phone" class="form-control" id="exampleInputPhoneU">
+                  </div>
+              </div>
+              <div class="row-check">
+                  <div class="form-check1">
+                      <input class="form-check-input" type="radio" formControlName="gender" name="gender" id="flexRadioDefault1U" value="m">
+                      <label class="form-check-label" for="flexRadioDefault1U">
+                        Hombre
+                      </label>
+                    </div>
+                    <div class="form-check2">
+                      <input class="form-check-input" type="radio" formControlName="gender"  name="gender" id="flexRadioDefault2U" value="f">
+                      <label class="form-check-label" for="flexRadioDefault2U">
+                        Mujer
+                      </label>
+                    </div>
+              </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button [disabled]="formValueUpdate.invalid" type="button" (click)="updateContactDetails()" class="btn btn-primary btn-sm">Guardar</button>
+  
+          <button type="button" id="cancelU" class="btn btn-link btn-sm" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

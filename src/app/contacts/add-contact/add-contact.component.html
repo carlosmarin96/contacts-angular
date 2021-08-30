@@ -1,0 +1,63 @@
+<nav class="navbar navbar-light">
+    <div class="container-fluid">
+        <h3>Ejercicio CMS</h3>
+        <div class="d-flex">
+            <button class="btn btn-light btn-sm" id="add-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><span>Agregar usuario</span> <img src="../../../assets/images/icono_agregar.png"/></button>
+        </div>
+    </div>
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar usuario</h5>
+        <input class="close" type="image" src="../../assets/images/icono_cerrar.png" data-bs-dismiss="modal" aria-label="Close" />
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="exampleInputName" class="form-label">Nombre</label>
+                    <input type="text" formControlName="firstName" class="form-control" id="exampleInputName">
+                </div>
+                <div class="col-md-6">
+                    <label for="exampleInputLastName" class="form-label">Apellido</label>
+                    <input type="text" formControlName="lastName" class="form-control" id="exampleInputLastName" maxlength="45" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="exampleInputLocation" class="form-label">Ubicación</label>
+                    <input type="text" formControlName="location" class="form-control" id="exampleInputLocation" maxlength="90">
+                </div>
+                <div class="col-md-6">
+                    <label for="exampleInputPhone" class="form-label">Celular</label>
+                    <input type="text" formControlName="phone" class="form-control" id="exampleInputPhone" maxlength="10">
+                </div>
+            </div>
+            <div class="row-check">
+                <div class="form-check1">
+                    <input class="form-check-input" type="radio" formControlName="gender" name="gender" id="flexRadioDefault1" value="m" required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Hombre
+                    </label>
+                  </div>
+                  <div class="form-check2">
+                    <input class="form-check-input" type="radio" formControlName="gender"  name="gender" id="flexRadioDefault2" value="f" required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Mujer
+                    </label>
+                  </div>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button [disabled]="formValue.invalid" type="button" (click)="postContactDetails()" class="btn btn-primary btn-sm">Agregar</button>
+
+        <button type="button" id="cancel" class="btn btn-link btn-sm" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

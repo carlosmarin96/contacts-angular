@@ -1,0 +1,7 @@
+{
+    "/users/*": {
+        "target": "http://iacenter.victortalamantes.com",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

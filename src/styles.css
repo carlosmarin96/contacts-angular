@@ -1,1 +1,251 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.navbar-light{
+    background-color: #467fd0;
+}
+.navbar .container-fluid{
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+.navbar .container-fluid h3{
+    padding-top: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+.navbar .container-fluid .d-flex .btn {
+    white-space: nowrap;
+    background-color: white;
+    padding-right: 5%;
+    color: #467fd0;
+    font-size: .75rem;
+}
+
+.navbar .container-fluid .d-flex .btn img {
+    width: .75rem;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    margin-bottom: 0rem;
+}
+.navbar .container-fluid .d-flex .btn span {
+    width: .75rem;
+    margin-left: .25rem;
+    margin-right: .25rem;
+    margin-bottom: 0rem;
+}
+
+.navbar .container-fluid {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.navbar .users {
+    padding-top: 1rem;
+    /* padding-bottom: 1rem; */
+}
+
+.navbar .container-fluid .flex-row h4 {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+.navbar .container-fluid .flex-row img {
+    padding-bottom: 0rem;
+}
+
+.navbar .users .d-flex input{
+    border-radius: 25px 0 0 25px;
+    width: 20.5rem;
+    height: 2rem;
+    background-color: lightgray;
+}
+
+.navbar .users .d-flex .search-icon{
+    border-radius: 0 25px 25px 0;
+    background-color: lightgray;
+}
+
+.navbar .users .d-flex .search-icon img{
+    width: 2rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .navbar .users .extra-padding{
+        padding-top: 1rem;
+    }
+
+    .navbar .users .d-flex input{
+        width: 15rem;
+        height: 2rem;
+    
+    }
+
+    .navbar .container-fluid .flex-row img {
+        padding-left: 50%;
+        height: 2rem;
+    }
+}
+
+.navbar .users .d-flex input::-webkit-input-placeholder{
+    font-size: 10px;
+}
+
+.contacts-container {
+    margin-left: 14%;
+    margin-right: 14%;
+}
+
+.arreglo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.espacio-carta {
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.carta {
+    border-radius: 1rem;
+    height: 10rem;
+    width: 14rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.encabezado {
+    background-color: #467fd0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 33%;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    box-sizing: border-box;
+    border:none;
+}
+
+.encabezado h4 {
+    font-size: 1rem;
+    color: white;
+    padding-left: 1rem;
+    padding-top: .5rem;
+}
+
+.encabezado input{
+    background-color: #0666bb;
+    border-radius: .25rem;
+    margin-right: 1rem;
+}
+
+.cuerpo {
+    display: flex;
+    align-items: center;
+}
+
+.imagen-s{
+    margin-left: 1.25rem;
+    margin-top: .75rem;;
+    background-color: seagreen;
+    border-radius: .5rem;
+    padding: 2% 5%;
+}
+
+.info {
+    margin-left: 1rem;
+    margin-top: .75rem;
+
+}
+
+.modal-content{
+    border-radius: .5rem;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+}
+
+#exampleModalLabel{
+    padding-left: 30%;
+    font-size: 1rem;
+}
+
+.close {
+    background-color: transparent;
+    border: none;
+    width: 10px;
+    height: 10px;
+}
+
+.modal-body{
+    padding-top: 20px;
+}
+
+.row{
+    padding-bottom: .75rem;
+}
+
+.form-label{
+    font-size: .5rem;
+}
+
+.form-control {
+    background-color: lightgray;
+    border-radius: 25px;
+    height: 2rem;
+}
+
+.row-check{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-check-input{
+    width: .75rem;
+    height: .75rem;
+}
+
+.form-check2{
+    padding-left: 1rem;
+}
+
+.form-check-label{
+    font-size: .5rem;
+    vertical-align: middle;
+    padding-left: .5rem;
+    padding-bottom: .25rem;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding-top: -5rem;
+}
+
+.botones button{
+    padding-bottom: .5rem;
+}
+
+
+
+
