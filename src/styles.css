@@ -64,10 +64,12 @@ body {
     font-size: 1rem;
     font-weight: 700;
     font: bold;
+    cursor: pointer;
 }
 
 .navbar .container-fluid .flex-row img {
     padding-bottom: 0rem;
+    cursor: pointer;
 }
 
 .navbar .users .d-flex input{
