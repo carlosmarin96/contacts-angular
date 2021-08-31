@@ -21,6 +21,8 @@ body {
     padding-top: 10px;
     color: white;
     font-size: 1rem;
+    font-weight: 700;
+    font: bold;
 }
 
 .navbar .container-fluid .d-flex .btn {
@@ -29,6 +31,8 @@ body {
     padding-right: 5%;
     color: #467fd0;
     font-size: .75rem;
+    font-weight: 700;
+    font: bold;
 }
 
 .navbar .container-fluid .d-flex .btn img {
@@ -58,6 +62,8 @@ body {
     padding-top: 1rem;
     padding-left: 1rem;
     font-size: 1rem;
+    font-weight: 700;
+    font: bold;
 }
 
 .navbar .container-fluid .flex-row img {
@@ -69,6 +75,8 @@ body {
     width: 20.5rem;
     height: 2rem;
     background-color: lightgray;
+    font-weight: 300;
+    font: bold;
 }
 
 .navbar .users .d-flex .search-icon{
@@ -149,11 +157,20 @@ body {
     color: white;
     padding-left: 1rem;
     padding-top: .5rem;
+    font-weight: 700;
+    font: bold;
 }
 
-.encabezado input{
+.encabezado button{
+    background: url('./assets/images/icono_editar.png');
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #0666bb;
+    background-size: .75rem;
+    width: 1.25rem;
+    height: 1.25rem;
     border-radius: .25rem;
+    border: none;
     margin-right: 1rem;
 }
 
@@ -164,8 +181,16 @@ body {
 
 .imagen-s{
     margin-left: 1.25rem;
+    margin-top: .75rem;
+    background-color: green;
+    border-radius: .5rem;
+    padding: 2% 5%;
+}
+
+.imagen-sf{
+    margin-left: 1.25rem;
     margin-top: .75rem;;
-    background-color: seagreen;
+    background-color: orange;
     border-radius: .5rem;
     padding: 2% 5%;
 }
@@ -173,7 +198,14 @@ body {
 .info {
     margin-left: 1rem;
     margin-top: .75rem;
+    font-weight: 300;
+    text-align:left;
+    vertical-align: middle;
+}
 
+.info p {
+    margin: 0;
+    font-size: .75rem;
 }
 
 .modal-content{

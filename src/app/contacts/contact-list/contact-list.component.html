@@ -19,13 +19,13 @@
                 <div class="carta">
                     <div class="encabezado">            
                         <h4>{{ contacto.firstName }} {{ contacto.lastName}}</h4>
-                        <input  type="image" data-bs-toggle="modal" data-bs-target="#exampleModalUpdate" (click)="onEdit(contacto)" src="../../../assets/images/icono_editar.png"/>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalUpdate" (click)="onEdit(contacto)"></button>
                     </div>
                     <div class="cuerpo">
                         <div *ngIf="contacto.gender === 'm'" class="imagen-s">
                             <img src="../../../assets/images/icono_hombre.png">
                         </div>
-                        <div *ngIf="contacto.gender === 'f'" class="imagen-s">
+                        <div *ngIf="contacto.gender === 'f'" class="imagen-sf">
                             <img src="../../../assets/images/icono_mujer.png">
                         </div>
                         <div class="info">
